@@ -24,7 +24,7 @@
 
       <!-- Here we have our button with id random-button -->
       <button id="random-button" class="btn btn-primary btn-lg"><h1><span class="glyphicon glyphicon-question-sign"></span></h1></button>
-      <button id="random-button2" class="btn btn-primar btn-med"><h1><span class="glypicon glyphicon-exclamation-sign"></span></h1></button>
+      <button id="random-button" class="btn btn-primar btn-med"><h1><span class="glyphicon glyphicon-exclamation-sign"></span></h1></button>
 
     </div>
 
@@ -36,6 +36,7 @@
   <script type="text/javascript">
 
     $(document).ready(function() {
+      
 
       // When random-button is clicked...
       $("#random-button").on("click", function() {
@@ -47,7 +48,7 @@
         for (var i = 0; i < 10; i++) {
 
           // For each iteration, generate a new random number between 1 and 9.
-          var random = Math.floor(Math.random() * 10) + 1;
+          var random = Math.floor(Math.random() * 10) + 11;
 
           // Take this number and then add it to the rest of the string.
           // In essence, we are iteratively building a string of numbers. (e.g. First: 1, Second: 13, Third: 135, etc.)
@@ -59,16 +60,7 @@
         $("#random-number").prepend("<br><hr>" + lottoNumber);
       });
 
-      $('#random-button2').on("click", function(){
-        var lottoNumber = "";
-
-        for (var index = 0; index < 6; index++) {
-          var random = Math.floor(Math.random() * 6) + 2;
-
-          lottoNumber = random + lottoNumber;
-        }
-      })
-
+      
     });
 
   </script>
