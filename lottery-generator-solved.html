@@ -44,10 +44,10 @@
         var lottoNumber = "";
 
         // Then initiate a loop to generate 9 separate numbers
-        for (var i = 0; i < 9; i++) {
+        for (var i = 0; i < 10; i++) {
 
           // For each iteration, generate a new random number between 1 and 9.
-          var random = Math.floor(Math.random() * 9) + 1;
+          var random = Math.floor(Math.random() * 10) + 1;
 
           // Take this number and then add it to the rest of the string.
           // In essence, we are iteratively building a string of numbers. (e.g. First: 1, Second: 13, Third: 135, etc.)
@@ -58,6 +58,16 @@
         // Once we have our final lotto number, we'll prepend it to the top of our random-number div.
         $("#random-number").prepend("<br><hr>" + lottoNumber);
       });
+
+      $('#random-button2').on("click", function(){
+        var lottoNumber = "";
+
+        for (var index = 0; index < 6; index++) {
+          var random = Math.floor(Math.random() * 6) + 2;
+
+          lottoNumber = random + lottoNumber;
+        }
+      })
 
     });
 
