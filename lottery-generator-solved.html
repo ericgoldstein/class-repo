@@ -20,7 +20,6 @@
   <div class="jumbotron">
 
     <h1 class="text-center">Generate Lottery Numbers!</h1>
-    <h2>Try it</h2>
 
     <div class="text-center">
       
@@ -80,10 +79,17 @@
         var lottoNumber = "";
 
         // Then initiate a loop to generate 9 separate numbers
+
+        for (var i = 0; i < 5; i++) {
+
+          // For each iteration, generate a new random number between 1 and 9.
+          var random = Math.floor(Math.random() * 5) + 1;
+
         for (var i = 0; i < 10; i++) {
 
           // For each iteration, generate a new random number between 1 and 9.
           var random = Math.floor(Math.random() * 10) + 11;
+
 
           // Take this number and then add it to the rest of the string.
           // In essence, we are iteratively building a string of numbers. (e.g. First: 1, Second: 13, Third: 135, etc.)
